@@ -1,4 +1,4 @@
-# terllo
+# Trello
 
 ## Project setup
 ```
