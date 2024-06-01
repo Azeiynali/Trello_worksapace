@@ -47,7 +47,7 @@
       Filter
     </div>
     <v-divider class="ms-1 mr-2" inset vertical></v-divider>
-    <div class="right-in-bar text-center rounded-circle mr-3 border-dark">
+    <div class="right-in-bar text-center rounded-circle mr-3 overflow-hidden border-dark">
       <img src="https://avatars.githubusercontent.com/u/133362693?v=4" />
     </div>
     <v-dialog max-width="700" max-height="300">
@@ -219,7 +219,7 @@
 
             <template v-slot:default="{ isActive }">
               <v-card
-                class="bg-grey-darken-4 p-3 d-flex flex-column ga-1 align-items-center"
+                class="bg-grey-darken-4 p-3 d-flex flex-column ga-1 align-items-center over-v"
               >
                 <button
                   @click="isActive.value = false"
@@ -231,21 +231,19 @@
                 <div style="background-color: #6b6b12; color: black" class="upBut">
                   LIMITED TIME OFFER
                 </div>
-                <h3>Try Trello Premium for Free 30 Days!</h3>
+                <h4>Try Trello Premium for Free 30 Days!</h4>
                 <small>explore the best of trello, no credit cards required!</small>
                 <v-card-text>
                   <li>Unlimited boards</li>
                   <li>Unlimited collaborators</li>
                   <li>Advanced checklists</li>
-                  <li>List colors</li>
                   <li>Admin and security features</li>
-                  <li>Unlimited automations</li>
                   <li>And more!</li>
                 </v-card-text>
 
                 <v-btn
                   :ripple="false"
-                  class="start-btn mt-5"
+                  class="start-btn text-none"
                   text="Start Free Trail"
                 ></v-btn>
                 <a href="#">explore plans</a>
@@ -253,12 +251,6 @@
             </template>
           </v-dialog>
         </v-list>
-        <v-list-item class="cursor-pointer" :ripple="false" title="Labels"></v-list-item>
-        <v-list-item
-          class="cursor-pointer"
-          :ripple="false"
-          title="Stickers"
-        ></v-list-item>
       </v-navigation-drawer>
     </v-layout>
   </v-card>
@@ -383,5 +375,8 @@ input[placeholder="example@trello.com"] {
 }
 .over-v {
   overflow: visible !important;
+}
+.over-s {
+  overflow-y: scroll !important;
 }
 </style>
